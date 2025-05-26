@@ -1,3 +1,4 @@
+// Modelo de dados para cada obra de arte exibida no app
 import Foundation
 
 struct ObraDeArte: Identifiable, Hashable {
