@@ -1,3 +1,4 @@
+// Tela de detalhes que exibe todas as informações da obra selecionada
 import SwiftUI
 
 struct DetalhesObraView: View {
@@ -6,6 +7,7 @@ struct DetalhesObraView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
+                // Imagem maior da obra com fundo em material e cantos arredondados
                 Image(systemName: obra.imagemNome)
                     .resizable()
                     .scaledToFit()
@@ -15,6 +17,7 @@ struct DetalhesObraView: View {
                     .background(.thickMaterial)
                     .clipShape(RoundedRectangle(cornerRadius: 24))
                 
+                // Grupo de textos com dados da obra
                 Group {
                     Text(obra.titulo)
                         .font(.title.bold())
