@@ -1,11 +1,14 @@
+// Implementação principal com LazyVGrid, busca e navegação
 import SwiftUI
 
 struct ContentView: View {
+     /// ViewModel que mantém a lista de obras e o texto de pesquisa
     @StateObject private var vm = GaleriaViewModel()
     
     private let itemsPerRowOptions = [1, 2, 3, 4]
     @State private var selectedItemsPerRow: Int = 2
     
+    /// Gera um array de GridItem com contagem dinâmica
     private var columns: [GridItem] {
         Array(repeating: GridItem(.flexible(), spacing: 16), count: selectedItemsPerRow)
     }
