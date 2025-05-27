@@ -1,7 +1,7 @@
 // Implementação principal com LazyVGrid, busca e navegação
 import SwiftUI
 
-struct ContentView: View {
+struct ContentViewAdaptativeColumns: View {
      /// ViewModel que mantém a lista de obras e o texto de pesquisa
     @StateObject private var vm = GaleriaViewModel()
     
